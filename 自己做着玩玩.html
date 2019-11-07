@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>时间盒子</title>
+		<meta http-equiv="refresh" content="1" />
+		<script src="js/scripts.js"></script>
+	</head>
+	<body>
+		<p id="demo"></p>
+		<script>
+			var x = new Date();
+			var s = x.getSeconds();
+			getBecome("demo","秒："+s);
+		</script>
+		<p id="demo2"></p>
+		<p id="demo3"></p>
+		<script>
+			var a = s;
+			var b = Math.round(a/60*100);
+			getBecome("demo2",b+"%");
+			for(i=0 ; i<b ; i++){
+				document.write("*");
+			}
+			//getBecome("demo3,c");
+		</script>
+		
+		
+		<p id="demo4"></p>
+		<script>
+			var n = new Date();
+			var m = n.getMinutes();
+			getBecome("demo4","分："+m);
+		</script>
+		<p id="demo5"></p>
+		<p id="demo6"></p>
+		<script>
+			var a2 = m;
+			var b2 = Math.round(a2/60*100);
+			getBecome("demo5",b2+"%");
+			for(i=0 ; i<b2 ; i++){
+				document.write("*");
+			}
+			//getBecome("demo3,c");
+		</script>
+		
+		
+		<p id="dem"></p>
+		<script>
+			var x3 = new Date();
+			var s3 = x3.getHours();
+			getBecome("dem","时："+s3);
+		</script>
+		<p id="dem2"></p>
+		<p id="dem3"></p>
+		<script>
+			var a3 = s3;
+			var b3 = Math.round(a3/24*100);
+			getBecome("dem2",b3+"%");
+			for(i=0 ; i<b3 ; i++){
+				document.write("*");
+			}
+			//getBecome("demo3,c");
+		</script>
+		
+		<p style="
+		font-size: 50px;
+		color: brown;
+		background-color: bisque;
+		text-align: center;
+		">你能感受到时间的飞速流逝吗？</p>
+		<p style="
+		font-size: 50px;
+		color: brown;
+		background-color: bisque;
+		text-align: center;
+		" onmouseover="window.open();">不要把鼠标移动到这里</p>
+		
+	</body>
+</html>
