@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function jinzhi(n){
+				switch(n){
+					case 10:return 'a';
+					break;
+					case 11:return 'b';
+					break;
+					case 12:return 'c';
+					break;
+					case 13:return 'd';
+					break;
+					case 14:return 'e';
+					break;
+					case 15:return 'f';
+					break;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type = "text" id = "begin" />
+		<button onclick = "
+			var begin = document.getElementById('begin').value;			
+			var begin = Number(begin);
+			if(begin<16 && begin>=10){
+				document.write(jinzhi(begin));
+			}else if(begin<10){
+				document.write(begin);
+			}else{
+			var arr = new Array();
+			var gtt = new Array();
+			for(i=0;parseInt(begin/16)!=0;i++){
+				arr.push(begin%16);
+				begin = parseInt(begin/16);
+				if(begin<16){
+					arr.push(begin);
+				}
+			}
+			for(n=0;n<arr.length;n++){
+				if((arr[n])>=10){
+					arr[n]=jinzhi(arr[n]);
+				}
+			}
+			for(x=0;x<arr.length;x++){
+				//arr[x]=toString(arr[x]);
+				console.log(typeof arr[x]);
+			}
+			console.log(arr);
+			for(y=(arr.length)-1;y>=0;y--){
+				document.write(arr[y]);
+			}
+			}
+			
+			">
+		   Count!
+			</button>
+			
+		</script>
+	</body>
+</html>
