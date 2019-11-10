@@ -24,8 +24,12 @@
 	</head>
 	<body>
 		<input type = "text" id = "begin" />
-		<button onclick = "
-			var begin = document.getElementById('begin').value;			
+		<button id = 'btn'>
+		   Count计算!
+			</button>
+		<script>
+			document.getElementById('btn').onclick =function(){
+		  	var begin = document.getElementById('begin').value;			
 			var begin = Number(begin);
 			if(begin<16 && begin>=10){
 				document.write(jinzhi(begin));
@@ -55,11 +59,7 @@
 				document.write(arr[y]);
 			}
 			}
-			
-			">
-		   Count计算!
-			</button>
-			
+			}
 		</script>
 	</body>
 </html>
